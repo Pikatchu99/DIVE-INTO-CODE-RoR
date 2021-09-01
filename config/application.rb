@@ -10,3 +10,6 @@ module TwitterClone
 
   end
 end
+
+config.time_zone = 'Benin'
+config.active_record.default_timezone = :local
