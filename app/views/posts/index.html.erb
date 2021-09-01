@@ -11,7 +11,7 @@
     <h5>Title: <%=post.title%></h5>
     <a href="<%=edit_post_path(post.id)%>" class="btn btn-outline-info ms-5 btn-sm">Modifier</a>
     <a href="<%= post_path(post.id)%>" class="btn btn-outline-danger ms-5 btn-sm" data-confirm="Etes de vous sur ?" data-method="DELETE">Supprimer</a>
-    <a href="<%=post_path(post.id)%>" class="btn btn-outline-info ms-5 btn-sm">Voir plus</a>
+  
   </div>
   <p class="ms-5 mt-5"><%= post.content%></p>
 </article>
