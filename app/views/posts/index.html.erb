@@ -1,0 +1,19 @@
+<h2 class="text-center" style="font-family: 'ZCOOL KuaiLe', cursive;">Bienvenue sur <span class="text-danger">TWITTER_CLONE APP</span></h2>
+<p class="text-center text-warning"><%= notice %> </p>
+<div class="d-grid gap-2 col-6 mx-auto mt-5">
+  <a class="btn btn-outline-success" href="<%= new_post_path%>">New tweet</a>
+</div>
+<p class="text-center fs-3 mt-5">Tout les tweet(s) <i class="bi bi-arrow-bar-down fs-1 text-warning"></i></p>
+<% @posts.each do |post| %>
+
+<article class="blog-post pb-5">
+  <div class="d-flex ">
+    <h5>Title: <%=post.title%></h5>
+    <a href="<%=edit_post_path(post.id)%>" class="btn btn-outline-info ms-5 btn-sm">Modifier</a>
+    <a href="<%= post_path(post.id)%>" class="btn btn-outline-danger ms-5 btn-sm" data-confirm="Etes de vous sur ?" data-method="DELETE">Supprimer</a>
+    <a href="<%=post_path(post.id)%>" class="btn btn-outline-info ms-5 btn-sm">Voir plus</a>
+  </div>
+  <p class="ms-5 mt-5"><%= post.content%></p>
+</article>
+
+<%end%>
